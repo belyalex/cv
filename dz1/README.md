@@ -1,19 +1,21 @@
-К сожалению, у меня слишком поздно получилось заняться решением этого ДЗ.
-Успел посчитать всего 2 сабмита, и то уже после завершения конкурса.
-В решении использовал переписанный hack_utils.py отсюда:
- [https://www.kaggle.com/stepangomilko/2b9a47](https://www.kaggle.com/stepangomilko/2b9a47)
+К сожалению, у меня слишком поздно получилось заняться решением этого ДЗ.  
+Успел посчитать всего 2 сабмита, и то уже после завершения конкурса.  
+![Мои результаты](https://github.com/belyalex/cv/blob/master/dz1/screenshot.png)  
+  
+В решении использовал переписанный hack_utils.py отсюда:  
+ [https://www.kaggle.com/stepangomilko/2b9a47](https://www.kaggle.com/stepangomilko/2b9a47)  
  
-Расчёт первого сабмита запускал со следующими параметрами (сеть - resnet18, batch size 1024, число эпох 4):
-python hack_train.py --data data -b 1024 --epochs 4 --gpu
-Reading data...
-Cook train data from csv...
-Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish
-Convert to tensor... finish
-Cook val data from csv...
-Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish
-Convert to tensor... finish
-Creating model...
-Ready for training...
+Расчёт первого сабмита запускал со следующими параметрами (сеть - resnet18, batch size 1024, число эпох 4):  
+python hack_train.py --data data -b 1024 --epochs 4 --gpu  
+Reading data...  
+Cook train data from csv...  
+Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish  
+Convert to tensor... finish  
+Cook val data from csv...  
+Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish  
+Convert to tensor... finish  
+Creating model...  
+Ready for training...  
 training...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 307/307 [14:02<00:00,  2.75s/it]
 validation...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 77/77 [04:05<00:00,  3.18s/it]
 Epoch # 0:      train loss: 5.9e+02     val loss: 3.6e+01
@@ -26,24 +28,24 @@ Epoch # 2:      train loss: 1.3e+01     val loss:   7.4
 training...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 307/307 [13:06<00:00,  2.56s/it]
 validation...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 77/77 [03:35<00:00,  2.79s/it]
 Epoch # 3:      train loss:   5.9       val loss:   5.0
-Cook test data from csv...
-Chunk... 0... 1... finish
-Convert to tensor... finish
-test prediction...: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 98/98 [04:32<00:00,  2.78s/it]
-(base)
-Результат: 21.49837 - private score 21.34037 - public score.
+Cook test data from csv...  
+Chunk... 0... 1... finish  
+Convert to tensor... finish  
+test prediction...: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 98/98 [04:32<00:00,  2.78s/it]  
+(base)  
+Результат: 21.49837 - private score 21.34037 - public score.  
 
-Второй сабмит (сеть - wide_resnet50_2, batchsize 256, число эпох 6):
- python hack_train.py --data ../dz1/data -b 256 --epochs 6 --gpu
-Reading data...
-Cook train data from csv...
-Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish
-Convert to tensor... finish
-Cook val data from csv...
-Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish
-Convert to tensor... finish
-Creating model...
-Ready for training...
+Второй сабмит (сеть - wide_resnet50_2, batchsize 256, число эпох 6):  
+python hack_train.py --data ../dz1/data -b 256 --epochs 6 --gpu  
+Reading data...  
+Cook train data from csv...  
+Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish  
+Convert to tensor... finish  
+Cook val data from csv...  
+Chunk... 0... 1... 2... 3... 4... 5... 6... 7... finish  
+Convert to tensor... finish  
+Creating model...  
+Ready for training...  
 training...: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1231/1231 [42:48<00:00,  2.09s/it]
 validation...: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 308/308 [03:49<00:00,  1.34it/s]
 Epoch # 0:      train loss: 9.4e+01     val loss:   5.7
@@ -61,10 +63,10 @@ validation...: 100%|████████████████████
 Epoch # 4:      train loss:   2.4       val loss:   2.3
 training...: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1231/1231 [42:45<00:00,  2.08s/it]
 validation...: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 308/308 [02:49<00:00,  1.82it/s]
-Epoch # 5:      train loss:   2.2       val loss:   2.2
-Cook test data from csv...
-Chunk... 0... 1... finish
-Convert to tensor... finish
-test prediction...: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 390/390 [04:23<00:00,  1.48it/s]
-(base)
-Результат: 12.03827 - private score 12.39559 - public score.
+Epoch # 5:      train loss:   2.2       val loss:   2.2  
+Cook test data from csv...  
+Chunk... 0... 1... finish  
+Convert to tensor... finish  
+test prediction...: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 390/390 [04:23<00:00,  1.48it/s]  
+(base)  
+Результат: 12.03827 - private score 12.39559 - public score.  
